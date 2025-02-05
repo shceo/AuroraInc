@@ -1,6 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Cloud, Music, Film, Car, Brain, CreditCard } from 'lucide-react';
+import '../assets/style/hero.css'
 
 const projects = [
   {
@@ -45,7 +46,7 @@ export default function Projects() {
   const navigate = useNavigate();
 
   return (
-    <section className="py-20 bg-white" id="projects">
+    <section className="py-20 bg-black" id="projects">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-4xl font-bold text-center mb-12 text-blue-600">Our Projects</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -53,7 +54,7 @@ export default function Projects() {
             <div
               key={project.title}
               onClick={() => navigate(project.path)}
-              className="group p-6 bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer"
+              className="group p-6 border-2 border-blue-500 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer"
             >
               <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                 <project.icon className="w-6 h-6 text-white" />

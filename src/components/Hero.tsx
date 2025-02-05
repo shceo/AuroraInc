@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
-
+import '../assets/style/hero.css'
+import bg from '../assets/images/bg.mp4'
 export default function Hero() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
@@ -49,22 +50,26 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gray-50">
-      {/* <canvas
-        ref={canvasRef}
-        className="absolute inset-0 w-full h-full"
-        width={800}
-        height={600}
-      /> */}
+    <section className=" relative min-h-screen flex items-center justify-center overflow-hidden">
+     <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover"
+      >
+        <source src={bg} type="video/mp4" />
+      </video>
+
       <div className="relative z-10 text-center px-4">
-        <h1 className="text-5xl md:text-7xl font-bold mb-8 text-blue-600">
+        <h1 className="text-5xl md:text-7xl font-bold mb-8 text-gray-100">
           From Great Ideas
           <br />
           to a Great Future
         </h1>
-        <button className="bg-blue-600 text-white px-8 py-3 rounded-full font-semibold shadow-lg hover:bg-blue-700 hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300">
+        {/* <button className="bg-blue-600 text-white px-8 py-3 rounded-full font-semibold shadow-lg hover:bg-blue-700 hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300">
           Get Started
-        </button>
+        </button> */}
       </div>
     </section>
   );
