@@ -26,7 +26,7 @@ export default function FAQ() {
   return (
     <section className="py-20 bg-white" id="faq">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-4xl font-bold text-center mb-12 text-blue-600">
+        <h2 className="text-4xl font-bold text-center mb-12 text-gray-900">
           Frequently Asked Questions
         </h2>
         
@@ -40,11 +40,11 @@ export default function FAQ() {
                 className="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50"
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
               >
-                <span className="font-medium text-blue-600">{faq.question}</span>
+                <span className="font-medium text-gray-900">{faq.question}</span>
                 {openIndex === index ? (
-                  <ChevronUp className="w-5 h-5 text-blue-500" />
+                  <ChevronUp className="w-5 h-5 text-gray-900" />
                 ) : (
-                  <ChevronDown className="w-5 h-5 text-blue-500" />
+                  <ChevronDown className="w-5 h-5 text-gray-900" />
                 )}
               </button>
               

@@ -50,13 +50,13 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className=" relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="bg-customDark relative min-h-screen flex items-center justify-center overflow-hidden">
      <video
         autoPlay
         loop
         muted
         playsInline
-        className="absolute inset-0 w-full h-full object-cover"
+        className="absolute inset-0 w-full h-full object-cover bg-black"
       >
         <source src={bg} type="video/mp4" />
       </video>
@@ -67,9 +67,6 @@ export default function Hero() {
           <br />
           to a Great Future
         </h1>
-        {/* <button className="bg-blue-600 text-white px-8 py-3 rounded-full font-semibold shadow-lg hover:bg-blue-700 hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300">
-          Get Started
-        </button> */}
       </div>
     </section>
   );

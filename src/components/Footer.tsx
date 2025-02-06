@@ -11,11 +11,11 @@ export default function Footer() {
             <div className="space-y-2">
               <p className="flex items-center">
                 <MapPin className="w-5 h-5 mr-2" />
-                123 Innovation Street, Tech City
+                Uzbekistan, Tashkent
               </p>
               <p className="flex items-center">
                 <Phone className="w-5 h-5 mr-2" />
-                +1 (555) 123-4567
+                +998 (93) 588-3721
               </p>
               <p className="flex items-center">
                 <Mail className="w-5 h-5 mr-2" />
@@ -30,7 +30,6 @@ export default function Footer() {
               <li><a href="#" className="hover:text-blue-200">Privacy Policy</a></li>
               <li><a href="#" className="hover:text-blue-200">Terms of Service</a></li>
               <li><a href="#" className="hover:text-blue-200">Careers</a></li>
-              <li><a href="#" className="hover:text-blue-200">Press Kit</a></li>
             </ul>
           </div>
           

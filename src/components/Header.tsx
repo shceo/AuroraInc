@@ -7,11 +7,11 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 right-0 bg-gray/80 backdrop-blur-lg z-50">
+    <header className="fixed top-0 left-0 right-0 bg-customDark/50 backdrop-blur-lg z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           <div className="flex items-center">
-            <img src={logoIcon} alt="Aurora Logo" className="h-8 w-auto" />
+            <a href="https://aurora.co.uz"><img src={logoIcon} alt="Aurora Logo" className="h-8 w-auto" /></a>
           </div>
 
           {/* Desktop Nav */}
@@ -29,22 +29,22 @@ export default function Header() {
 
           {/* Social Icons */}
           <div className="hidden md:flex items-center space-x-4">
-            <a href="#" className="text-gray-100 hover:text-blue-600 transition-colors">
+            <a href="https://t.me/Aurora_llc" target="_blank" className="text-gray-100 hover:text-blue-600 transition-colors">
               <Send size={20} />
             </a>
-            <a href="#" className="text-gray-100 hover:text-blue-600 transition-colors">
+            <a href="#" target="_blank" className="text-gray-100 hover:text-blue-600 transition-colors">
               <Twitter size={20} />
             </a>
-            <a href="#" className="text-gray-100 hover:text-blue-600 transition-colors">
+            {/* <a href="#" className="text-gray-100 hover:text-blue-600 transition-colors">
               <Linkedin size={20} />
-            </a>
+            </a> */}
             <a href="https://www.instagram.com/aurora.co.uz" target="_blank" className="text-gray-100 hover:text-blue-600 transition-colors">
               <Instagram size={20} />
             </a>
           </div>
 
           {/* Burger Button */}
-          <button className="md:hidden" onClick={() => setIsOpen(true)}>
+          <button className="md:hidden text-gray-100" onClick={() => setIsOpen(true)}>
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
             </svg>
@@ -53,7 +53,7 @@ export default function Header() {
       </div>
 
       {/* Mobile Menu */}
-      <div className={`fixed top-0 right-0 h-screen w-72 bg-white shadow-lg transform transition-transform ${isOpen ? "translate-x-0" : "translate-x-full"}`}>
+      <div className={`fixed top-0 right-0 h-screen w-72 bg-black text-white shadow-lg transform transition-transform ${isOpen ? "translate-x-0" : "translate-x-full"}`}>
         <div className="flex justify-between items-center p-4 border-b">
           <h2 className="text-lg font-semibold">Menu</h2>
           <button onClick={() => setIsOpen(false)}>
@@ -64,9 +64,9 @@ export default function Header() {
         </div>
 
         <nav className="flex flex-col space-y-4 p-4">
-          <a href="#advertisers" className="text-gray-700 hover:text-blue-600 transition-colors" onClick={() => setIsOpen(false)}>Advertisers</a>
-          <a href="#investors" className="text-gray-700 hover:text-blue-600 transition-colors" onClick={() => setIsOpen(false)}>Investors</a>
-          <a href="#about" className="text-gray-700 hover:text-blue-600 transition-colors" onClick={() => setIsOpen(false)}>About Us</a>
+          <a href="#advertisers" className="text-gray-100 hover:text-blue-600 transition-colors" onClick={() => setIsOpen(false)}>Advertisers</a>
+          <a href="#investors" className="text-gray-100 hover:text-blue-600 transition-colors" onClick={() => setIsOpen(false)}>Investors</a>
+          <a href="#about" className="text-gray-100 hover:text-blue-600 transition-colors" onClick={() => setIsOpen(false)}>About Us</a>
         </nav>
       </div>
     </header>
