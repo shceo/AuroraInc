@@ -51,7 +51,7 @@ export default function Hero() {
 
   return (
     <section className="bg-customDark relative min-h-screen flex items-center justify-center overflow-hidden">
-     <video
+     {/* <video
         autoPlay
         loop
         muted
@@ -59,7 +59,7 @@ export default function Hero() {
         className="absolute inset-0 w-full h-full object-cover bg-black"
       >
         <source src={bg} type="video/mp4" />
-      </video>
+      </video> */}
 
       <div className="relative z-10 text-center px-4">
         <h1 className="text-5xl md:text-7xl font-bold mb-8 text-gray-100">

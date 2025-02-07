@@ -1,5 +1,6 @@
 import React from 'react';
 import { Send, Twitter, Linkedin, Instagram } from 'lucide-react';
+import { FaXTwitter } from 'react-icons/fa6';
 
 export default function Footer() {
   return (
@@ -32,7 +33,7 @@ export default function Footer() {
             <h3 className="text-lg font-semibold mb-4">Follow Us</h3>
             <div className="flex space-x-4">
               <a href="#" target="_blank" className="text-gray-400 hover:text-purple-400">
-                <Twitter className="h-6 w-6" />
+                <FaXTwitter className="h-6 w-6" />
               </a>
               <a href="https://t.me/Aurora_llc" target="_blank" className="text-gray-400 hover:text-purple-400">
                 <Send className="h-6 w-6" />

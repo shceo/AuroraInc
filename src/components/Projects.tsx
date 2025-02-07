@@ -1,46 +1,76 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Cloud, Music, Film, Car, Brain, CreditCard } from 'lucide-react';
+import { Cloud, Book, Film, Car, Brain, CreditCard, Play } from 'lucide-react';
+import Images from './Images'
 import '../assets/style/hero.css'
 
 const projects = [
   {
-    title: 'Aurora Weather',
-    description: 'Advanced weather forecasting powered by AI',
-    icon: Cloud,
-    path: '/weather'
-  },
-  {
-    title: 'Aurora Music',
-    description: 'Next-generation music streaming platform',
-    icon: Music,
-    path: '/music'
-  },
-  {
-    title: 'Aurora Movies',
-    description: 'Personalized streaming experience',
-    icon: Film,
-    path: '/movies'
-  },
-  {
-    title: 'Aurora Taxi',
-    description: 'Revolutionary ride-sharing service',
-    icon: Car,
-    path: '/taxi'
-  },
-  {
-    title: 'Aurora AI',
-    description: 'Cutting-edge artificial intelligence solutions',
-    icon: Brain,
-    path: '/ai'
-  },
-  {
-    title: 'Aurora Pay',
-    description: 'Secure and seamless payment platform',
+    title: 'Fintech',
+    description: 'Innovative financial solutions and digital payment platforms',
     icon: CreditCard,
-    path: '/pay'
+    path: '/fintech',
+    // background: Images.fintech
+  },
+  {
+    title: 'EntertainmentTech',
+    description: 'Experience the future of entertainment with immersive streaming services',
+    icon: Film,
+    path: '/entertainment',
+    // background: images.entertainment
+  },
+  {
+    title: 'InfoTech',
+    description: 'Innovative cloud-based solutions for digital information management',
+    icon: Cloud,
+    path: '/infotech',
+    // background: images.infotech
+  },
+  {
+    title: 'Ridetech',
+    description: 'Revolutionizing urban mobility with efficient ride-sharing solutions',
+    icon: Car,
+    path: '/ridetech',
+    // background: images.ridetech
+  },
+  {
+    title: 'MedTech',
+    description: 'Innovative medical solutions that enhance patient care and healthcare delivery',
+    icon: Brain,
+    path: '/medtech',
+    // background: images.medtech
+  },
+  {
+    title: 'EdTech',
+    description: 'Empowering education with interactive digital learning tools',
+    icon: Book,
+    path: '/edtech',
+    // background: images.edtech
+  },
+  {
+    title: 'GameTech',
+    description: 'Innovative gaming solutions and immersive interactive experiences',
+    icon: Play,
+    path: '/gametech',
+    // background: images.gametech
+  },
+  {
+    title: 'Artificial Intelligence',
+    description: 'Revolutionizing industries with cutting-edge AI and machine learning technologies',
+    icon: Play,
+    path: '/ai',
+    // background: images.ai
+  },
+  {
+    title: 'PropTech',
+    description: 'Innovative solutions for the real estate industry powered by digital technology',
+    icon: Play,
+    path: '/proptech',
+    // background: images.proptech
   },
 ];
+
+
 
 export default function Projects() {
   const navigate = useNavigate();
@@ -52,10 +82,12 @@ export default function Projects() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project) => (
             <div
-              key={project.title}
-              onClick={() => navigate(project.path)}
-              className="group p-6 bg-gray-100 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer"
-            >
+            key={project.title}
+            onClick={() => navigate(project.path)}
+            className="group p-6 bg-gray-100 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer"
+            // style={{ backgroundImage: `url(${project.background})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
+          >
+          
               <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                 <project.icon className="w-6 h-6 text-white" />
               </div>
