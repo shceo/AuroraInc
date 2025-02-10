@@ -45,7 +45,7 @@ export default function Header() {
 
           <nav className="hidden md:flex space-x-8">
             <a
-              href="#advertisers"
+              href="/advertisers"
               className="text-gray-100 hover:text-blue-600 transition-colors"
             >
               Advertisers

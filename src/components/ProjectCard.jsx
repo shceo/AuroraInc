@@ -24,7 +24,7 @@ export default function ProjectCard({ title, description, type, link }) {
           <Icon className="h-6 w-6 text-purple-600" />
         </div>
         <div>
-          <h3 className="text-lg font-semibold text-gray-900">{title}</h3>
+          <h3 className="text-lg courier-prime-regular font-semibold text-gray-900">{title}</h3>
           <p className="text-gray-600 mt-1">{description}</p>
         </div>
       </div>

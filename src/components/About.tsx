@@ -10,7 +10,7 @@ export default function About() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Блок Mission с фоном bg1 */}
-          <div className="lg:col-span-2 relative rounded-xl overflow-hidden shadow-sm cursor-pointer group">
+          <div className="lg:col-span-2 relative h-[632px] rounded-xl overflow-hidden shadow-sm cursor-pointer group">
             {/* Фоновая картинка */}
             <div
               className="absolute inset-0 bg-cover bg-center transition-transform duration-300 transform group-hover:scale-105"

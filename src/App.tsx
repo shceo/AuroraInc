@@ -9,7 +9,7 @@ import MoviesPage from './pages/MoviesPage';
 import TaxiPage from './pages/TaxiPage';
 import AIPage from './pages/AIPage';
 import PayPage from './pages/PayPage';
-
+import './assets/style/font.css'
 function ScrollToTop() {
   const location = useLocation();
   
