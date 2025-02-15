@@ -1,8 +1,8 @@
 export default {
   translation: {
     navigation: {
-      advertisers: 'Advertisers',
-      investors: 'Investors',
+      advertisers: 'For Advertisers',
+      investors: 'For Investors',
       aboutUs: 'About Us',
     },
     hero: {
