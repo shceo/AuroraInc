@@ -120,7 +120,6 @@ export default function Header() {
         }`}
       >
         <div className="flex justify-between items-center p-4 border-b">
-          <h2 className="text-lg font-semibold">Menu</h2>
           <button onClick={() => setIsOpen(false)}>
             <svg
               className="w-6 h-6"
@@ -140,7 +139,7 @@ export default function Header() {
         <nav className="flex flex-col space-y-4 p-4">
           <a
             href="#advertisers"
-            className="text-gray-100 hover:text-blue-600 transition-colors"
+            className="text-gray-100 mt-4 hover:text-blue-600 transition-colors"
             onClick={() => setIsOpen(false)}
           >
             Advertisers
@@ -159,6 +158,7 @@ export default function Header() {
           >
             About Us
           </a>
+          
           <div className="md:flex flex items-center space-x-4">
             <a
               href="https://t.me/Aurora_llc"
@@ -183,7 +183,8 @@ export default function Header() {
             </a>
           </div>
         </nav>
-        
+        <LanguageSwitcher />
+
       </div>
     </header>
   );

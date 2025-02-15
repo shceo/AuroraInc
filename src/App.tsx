@@ -9,6 +9,10 @@ import MoviesPage from './pages/MoviesPage';
 import TaxiPage from './pages/TaxiPage';
 import AIPage from './pages/AIPage';
 import PayPage from './pages/PayPage';
+import Mission from './pages/Mission';
+import Future from './pages/Future';
+import Principles from './pages/Principles';
+
 import './assets/style/font.css'
 function ScrollToTop() {
   const location = useLocation();
@@ -34,6 +38,9 @@ function App() {
           <Route path="/taxi" element={<TaxiPage />} />
           <Route path="/ai" element={<AIPage />} />
           <Route path="/pay" element={<PayPage />} />
+          <Route path="/mission" element={<Mission />} />
+          <Route path="/future" element={<Future />} />
+          <Route path="/principles" element={<Principles />} />
         </Routes>
         <Footer />
       </div>

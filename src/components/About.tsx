@@ -1,10 +1,10 @@
 import React from 'react';
 import { Target, Rocket, Shield } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import bg1 from '../assets/images/bg1.png';
 import bg2 from '../assets/images/bg2.png';
 import bg3 from '../assets/images/bg3.png';
 import { useTranslation } from 'react-i18next';
-
 export default function About() {
   const { t } = useTranslation();
   const localizedAbout = t('about.list', { returnObjects: true });
@@ -16,8 +16,11 @@ export default function About() {
           {t('about.title')}
         </h2>
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-
-          <div className="lg:col-span-2 relative h-[632px] rounded-xl overflow-hidden shadow-sm cursor-pointer group">
+           {/* Mission */}
+           <Link
+            to="/mission"
+            className="lg:col-span-2 relative h-[632px] rounded-xl overflow-hidden shadow-sm cursor-pointer group"
+          >
             <div
               className="absolute inset-0 bg-cover bg-center transition-transform duration-300 transform group-hover:scale-105"
               style={{ backgroundImage: `url(${bg3})` }}
@@ -30,9 +33,11 @@ export default function About() {
                 {localizedAbout[0]?.description}
               </p>
             </div>
-          </div>
+          </Link>
 
           <div className="lg:col-span-1 space-y-8">
+            {/* Future */}
+            <Link to="/future">
             <div className="relative rounded-xl h-[300px] overflow-hidden shadow-sm cursor-pointer group">
               <div
                 className="absolute inset-0 bg-cover bg-center transition-transform duration-300 transform group-hover:scale-105"
@@ -47,8 +52,12 @@ export default function About() {
                 </p>
               </div>
             </div>
-
+            </Link>
+            
+            {/* Princisples */}
             <div className="relative rounded-xl h-[300px] overflow-hidden shadow-sm cursor-pointer group">
+            <Link to="/princisples">
+
               <div
                 className="absolute inset-0 bg-cover bg-center transition-transform duration-300 transform group-hover:scale-105"
                 style={{ backgroundImage: `url(${bg1})` }}
@@ -61,6 +70,8 @@ export default function About() {
                   {localizedAbout[2]?.description}
                 </p>
               </div>
+            </Link>
+
             </div>
           </div>
         </div>
