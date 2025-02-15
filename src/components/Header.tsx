@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Send, Twitter, Instagram } from 'lucide-react';
 import { FaXTwitter } from 'react-icons/fa6';
+import { useTranslation } from 'react-i18next';
+import {Earth} from 'lucide-react';
+import LanguageSwitcher from './LanguageSwitcher';
 import logoIcon from '../assets/images/logo.png';
 import logoIcon1 from '../assets/images/logo1.png';
 
@@ -9,6 +12,7 @@ export default function Header() {
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [hasScrolled, setHasScrolled] = useState(false);
+  const { t } = useTranslation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -48,23 +52,24 @@ export default function Header() {
               href="/advertisers"
               className="text-gray-100 hover:text-blue-600 transition-colors"
             >
-              Advertisers
+              {t('navigation.advertisers')}
             </a>
             <a
               href="#investors"
               className="text-gray-100 hover:text-blue-600 transition-colors"
             >
-              Investors
+              {t('navigation.investors')}
             </a>
             <a
               href="#about"
               className="text-gray-100 hover:text-blue-600 transition-colors"
             >
-              About Us
+              {t('navigation.aboutUs')}
             </a>
           </nav>
 
           <div className="hidden md:flex items-center space-x-4">
+          <LanguageSwitcher />
             <a
               href="https://t.me/Aurora_llc"
               target="_blank"

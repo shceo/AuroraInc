@@ -1,37 +1,23 @@
 import React, { useState } from 'react';
 import { ChevronDown, ChevronUp } from 'lucide-react';
-
-const faqs = [
-  {
-    question: 'What makes Aurora different from other companies?',
-    answer: 'Our unique approach combines cutting-edge technology with user-centric design, ensuring that every solution we create adds real value to our users\' lives.',
-  },
-  {
-    question: 'How do you ensure data privacy and security?',
-    answer: 'We implement state-of-the-art encryption and security measures, following industry best practices and compliance standards to protect user data.',
-  },
-  {
-    question: 'Can I integrate Aurora services with my existing systems?',
-    answer: 'Yes, our services are designed with integration in mind, featuring comprehensive APIs and documentation to ensure seamless connectivity.',
-  },
-  {
-    question: 'What kind of support do you offer?',
-    answer: '24/7 technical support, dedicated account managers, and comprehensive documentation are available to all our enterprise clients.',
-  },
-];
+import { useTranslation } from 'react-i18next';
 
 export default function FAQ() {
+  const { t } = useTranslation();
   const [openIndex, setOpenIndex] = useState<number | null>(null);
+
+  // Получаем список вопросов и ответов из локализации
+  const localizedFaqs = t('faq.list', { returnObjects: true });
 
   return (
     <section className="py-20 bg-white" id="faq">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="courier-prime-regular text-4xl font-bold text-center mb-12 text-gray-900">
-          Frequently Asked Questions
+        <h2 className=" text-4xl font-bold text-center mb-12 text-gray-900">
+          {t('faq.title')}
         </h2>
         
         <div className="space-y-4">
-          {faqs.map((faq, index) => (
+          {localizedFaqs.map((faq: any, index: number) => (
             <div
               key={index}
               className="border border-gray-200 rounded-lg overflow-hidden"
