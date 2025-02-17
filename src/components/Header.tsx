@@ -155,14 +155,14 @@ export default function Header() {
             className="text-gray-100 mt-4 hover:text-blue-600 transition-colors"
             onClick={() => setIsOpen(false)}
           >
-            Advertisers
+           For Advertisers
           </a>
           <a
             href="#investors"
             className="text-gray-100 hover:text-blue-600 transition-colors"
             onClick={() => setIsOpen(false)}
           >
-            Investors
+           For Investors
           </a>
           <a
             href="#about"
