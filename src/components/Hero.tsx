@@ -15,7 +15,7 @@ export default function Hero() {
         (window as any).particlesJS('particles-js', {
           particles: {
             number: {
-              value: 150,
+              value: 125,
               density: {
                 enable: true,
                 value_area: 800,
