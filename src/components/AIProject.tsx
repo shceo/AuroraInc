@@ -1,10 +1,8 @@
-// import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { Cloud, Book, Film, Car, Brain, CreditCard, Play, BrainCircuit } from 'lucide-react';
+import { BrainCircuit, Brain } from 'lucide-react';
 import '../assets/style/hero.css';
 
-// Определяем интерфейс для локализованных данных проекта
 interface LocalizedProject {
   id: string;
   title: string;
@@ -12,26 +10,27 @@ interface LocalizedProject {
 }
 
 const staticProjects = [
-  { id: 'FinTech', icon: CreditCard, path: '/finTech' },
-  { id: 'EntertainmentTech', icon: Film, path: '/entertainment' },
-  { id: 'InfoTech', icon: Cloud, path: '/infotech' },
-  { id: 'RideTech', icon: Car, path: '/ridetech' },
-  { id: 'MedTech', icon: Brain, path: '/medtech' },
-  { id: 'EdTech', icon: Book, path: '/edtech' },
-  { id: 'GameTech', icon: Play, path: '/gametech' },
-  { id: 'Artificial Intelligence', icon: BrainCircuit, path: '/ai' },
-  { id: 'PropTech', icon: Play, path: '/proptech' },
+  {
+    id: 'AuroraGPT',
+    icon: Brain,
+    path: '/ai',
+  },
+  {
+    id: 'AuroraAI',
+    icon: BrainCircuit,
+    path: '/ai',
+  },
 ];
 
 export default function Projects() {
   const navigate = useNavigate();
   const { t } = useTranslation();
 
-  // Приводим результат к массиву объектов LocalizedProject
+  // Приводим тип, чтобы TypeScript понимал, что localizedProjects — это массив
   const localizedProjects = t('projects.list', { returnObjects: true }) as LocalizedProject[];
 
-  // Используем типизированный find, указывая тип параметра
   const projects = staticProjects.map((proj) => {
+    // Теперь TypeScript знает, что localizedProjects — это массив LocalizedProject
     const localized = localizedProjects.find((item: LocalizedProject) => item.id === proj.id);
     return {
       ...proj,
@@ -43,9 +42,6 @@ export default function Projects() {
   return (
     <section className="py-20 bg-white" id="projects">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-4xl font-bold text-center mb-12 text-gray-900">
-          {t('projects.title')}
-        </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project) => {
             const Icon = project.icon;
@@ -61,7 +57,7 @@ export default function Projects() {
                 <h3 className="text-xl font-bold mb-2 text-gray-900">
                   {project.title}
                 </h3>
-                {/* <p className="text-gray-900">{project.description}</p> */}
+                <p className="text-gray-900">{project.description}</p>
               </div>
             );
           })}

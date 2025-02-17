@@ -2,22 +2,26 @@ import React, { useState } from 'react';
 import { ChevronDown, ChevronUp } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
+interface LocalizedFaq {
+  question: string;
+  answer: string;
+}
+
 export default function FAQ() {
   const { t } = useTranslation();
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
-  // Получаем список вопросов и ответов из локализации
-  const localizedFaqs = t('faq.list', { returnObjects: true });
+  const localizedFaqs = t('faq.list', { returnObjects: true }) as LocalizedFaq[];
 
   return (
     <section className="py-20 bg-white" id="faq">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className=" text-4xl font-bold text-center mb-12 text-gray-900">
+        <h2 className="text-4xl font-bold text-center mb-12 text-gray-900">
           {t('faq.title')}
         </h2>
         
         <div className="space-y-4">
-          {localizedFaqs.map((faq: any, index: number) => (
+          {localizedFaqs.map((faq: LocalizedFaq, index: number) => (
             <div
               key={index}
               className="border border-gray-200 rounded-lg overflow-hidden"

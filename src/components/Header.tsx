@@ -29,6 +29,20 @@ export default function Header() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, [lastScrollY]);
 
+  useEffect(() => {
+    if (isOpen) {
+      // Запрещаем прокрутку
+      document.body.style.overflow = 'hidden';
+    } else {
+      // Возвращаем стандартное значение
+      document.body.style.overflow = '';
+    }
+  
+    // На случай размонтирования компонента – сбрасываем стиль
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isOpen]);
   return (
     <header
       className={`fixed top-0 left-0 right-0 bg-customDark/50 backdrop-blur-lg z-50 transition-transform duration-300 ${
@@ -113,12 +127,11 @@ export default function Header() {
           </button>
         </div>
       </div>
-
       <div
-        className={`fixed top-0 right-0 h-screen w-72 bg-black text-white shadow-lg transform transition-transform ${
-          isOpen ? 'translate-x-0' : 'translate-x-full'
-        }`}
-      >
+  className={`fixed inset-0 h-screen bg-black text-white shadow-lg transform transition-transform duration-300 ${
+    isOpen ? 'translate-x-0' : 'translate-x-full'
+  }`}
+>
         <div className="flex justify-between items-center p-4 border-b">
           <button onClick={() => setIsOpen(false)}>
             <svg

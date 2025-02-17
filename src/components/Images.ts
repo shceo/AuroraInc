@@ -1,4 +1,4 @@
-import fintech from "../assets/images/1.png";
+// import fintech from "../assets/images/1.png";
 // import entertainment from "../assets/entertainment.png";
 // import infotech from "../assets/infotech.png";
 // import ridetech from "../assets/ridetech.png";
@@ -9,7 +9,7 @@ import fintech from "../assets/images/1.png";
 // import proptech from "../assets/proptech.png";
 
 const Images = {
-  fintech,
+  // fintech,
   // entertainment,
   // infotech,
   // ridetech,

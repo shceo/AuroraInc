@@ -1,6 +1,7 @@
-import React from 'react';
 import { Brain, ArrowLeft } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
+import AIProjects from '../components/AIProject';
+
 
 export default function AIPage() {
   const navigate = useNavigate();
@@ -33,15 +34,7 @@ export default function AIPage() {
             <p className="text-xl text-gray-600 mb-8">
               Cutting-edge artificial intelligence solutions for businesses and enterprises.
             </p>
-
-            <h2 className="text-2xl font-semibold text-blue-600 mb-4">Features</h2>
-            <ul className="space-y-2 text-gray-600">
-              <li>Machine learning models</li>
-              <li>Natural language processing</li>
-              <li>Computer vision solutions</li>
-              <li>Predictive analytics</li>
-              <li>Custom AI development</li>
-            </ul>
+            <AIProjects/>
           </div>
         </div>
       </div>
