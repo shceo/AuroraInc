@@ -49,7 +49,7 @@ export default function Hero() {
               },
             },
             size: {
-              value: 5,
+              value: 4,
               random: true,
               anim: {
                 enable: false,

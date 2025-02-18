@@ -1,4 +1,4 @@
-import { Brain, ArrowLeft } from 'lucide-react';
+import { Car, ArrowLeft } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import AIProjects from '../components/AIProject';
 
@@ -26,7 +26,7 @@ export default function RideTech() {
 
         <div className="bg-white rounded-xl shadow-lg p-8">
           <div className="flex items-center mb-6">
-            <Brain className="w-12 h-12 text-blue-600 mr-4" />
+            <Car className="w-12 h-12 text-blue-600 mr-4" />
             <h1 className="text-4xl font-bold text-blue-600">RideTech</h1>
           </div>
 
