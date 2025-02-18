@@ -61,7 +61,7 @@ export default function Projects() {
                 <h3 className="text-xl font-bold mb-2 text-gray-900">
                   {project.title}
                 </h3>
-                {/* <p className="text-gray-900">{project.description}</p> */}
+                <p className="text-gray-900">{project.description}</p>
               </div>
             );
           })}

@@ -12,6 +12,11 @@ import MedTech from './pages/MedTech';
 import GameTech from './pages/GameTech';
 import EntertaimentTech from './pages/EntertaimentTech';
 import PropTech from './pages/PropTech';
+import Missions from './pages/Missions';
+import Future from './pages/Future';
+import Principles from './pages/Princisples';
+
+
 
 
 
@@ -43,6 +48,10 @@ function App() {
           <Route path="/medtech" element={<MedTech />} />
           <Route path="/gametech" element={<GameTech />} />
           <Route path="/proptech" element={<PropTech />} />
+          <Route path="/missions" element={<Missions />} />
+          <Route path="/future" element={<Future />} />
+          <Route path="/princisples" element={<Principles />} />
+
         </Routes>
         <Footer />
       </div>

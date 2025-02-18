@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { Send, Twitter, Instagram } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { Send, Instagram } from 'lucide-react';
 import { FaXTwitter } from 'react-icons/fa6';
 import { useTranslation } from 'react-i18next';
-import {Earth} from 'lucide-react';
 import LanguageSwitcher from './LanguageSwitcher';
 import logoIcon from '../assets/images/logo.png';
 import logoIcon1 from '../assets/images/logo1.png';

@@ -14,7 +14,7 @@ export default function About() {
   const localizedAbout = t('about.list', { returnObjects: true }) as LocalizedAboutItem[];
 
   return (
-    <div className="bg-white min-h-screen bg-customDark py-24">
+    <div id='about'   className="bg-white min-h-screen bg-customDark py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-4xl font-bold text-center mb-12 text-gray-900">
           {t('about.title')}
@@ -22,7 +22,7 @@ export default function About() {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Mission */}
           <Link
-            to="/mission"
+            to="/missions"
             className="lg:col-span-2 relative h-[632px] rounded-xl overflow-hidden shadow-sm cursor-pointer group"
           >
             <div
