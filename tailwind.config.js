@@ -6,6 +6,9 @@ export default {
       colors: {
         customDark: "#0C0C0C",
       },
+      screens: {
+        xs: { max: '380px' },
+      },
     },
   },
   plugins: [],

@@ -27,7 +27,7 @@ export default function EntertaimentTech() {
         <div className="bg-white rounded-xl shadow-lg p-8">
           <div className="flex items-center mb-6">
             <Film className="w-12 h-12 text-blue-600 mr-4" />
-            <h1 className="text-4xl font-bold text-blue-600">EntertaimentTech</h1>
+            <h1 className="text-4xl sm:text-3xl xs:text-2xl font-bold text-blue-600">EntertaimentTech</h1>
           </div>
 
           <div className="prose max-w-none">
