@@ -15,14 +15,14 @@ export default function Hero() {
         (window as any).particlesJS('particles-js', {
           particles: {
             number: {
-              value: 125,
+              value: 100,
               density: {
                 enable: true,
                 value_area: 800,
               },
             },
             color: {
-              value: '#FFFFFF', // Цвет частиц — белый
+              value: '#FFFFFF',
             },
             shape: {
               type: 'circle',
@@ -61,13 +61,13 @@ export default function Hero() {
             line_linked: {
               enable: true,
               distance: 150,
-              color: '#FFFFFF', // Цвет линий между частицами — белый
+              color: '#FFFFFF',
               opacity: 0.4,
               width: 1,
             },
             move: {
               enable: true,
-              speed: 2,
+              speed: 7,
               direction: 'none',
               random: false,
               straight: false,
@@ -84,7 +84,7 @@ export default function Hero() {
             events: {
               onhover: {
                 enable: true,
-                mode: 'attract',
+                mode: 'grab', // Изменили с 'attract' на 'grab'
               },
               onclick: {
                 enable: true,
@@ -93,15 +93,16 @@ export default function Hero() {
               resize: true,
             },
             modes: {
-              attract: {
-                distance: 400,
-                duration: 0.2,
-              },
               grab: {
-                distance: 400,
+                distance: 200,
                 line_linked: {
                   opacity: 1,
                 },
+              },
+              // При необходимости можно оставить или удалить ненужные режимы
+              attract: {
+                distance: 400,
+                duration: 0.2,
               },
               bubble: {
                 distance: 400,
