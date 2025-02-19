@@ -29,7 +29,7 @@ export default function Missions() {
           </div>
 
           <div className="prose max-w-none">
-            <p className="text-md text-gray-600 mb-3">Сосать Хуи</p>
+            <p className="text-md text-gray-600 mb-3">Наша миссия состоит в том что бы помогать людям</p>
           </div>
         </div>
       </div>

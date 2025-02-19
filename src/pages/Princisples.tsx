@@ -29,7 +29,7 @@ export default function Principles() {
           </div>
 
           <div className="prose max-w-none">
-            <p className="text-md text-gray-600 mb-3">У нас их нет</p>
+            <p className="text-md text-gray-600 mb-3">У нас принципов нет толлько цели </p>
           </div>
         </div>
       </div>
