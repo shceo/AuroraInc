@@ -4,7 +4,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import HomePage from './pages/HomePage';
 import AIPage from './pages/AIPage';
-import EdTech from './pages/EntertaimentTech';
+import EdTech from './pages/EdTech';
 import FinTech from './pages/FinTech';
 import InfoTech from './pages/InfoTech';
 import RideTech from './pages/RideTech';
