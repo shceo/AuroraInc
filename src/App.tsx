@@ -21,6 +21,7 @@ import Principles from './pages/Princisples';
 
 
 import './assets/style/font.css'
+import Investors from './pages/investors';
 function ScrollToTop() {
   const location = useLocation();
   
@@ -51,7 +52,7 @@ function App() {
           <Route path="/missions" element={<Missions />} />
           <Route path="/future" element={<Future />} />
           <Route path="/princisples" element={<Principles />} />
-
+          <Route path="/investors" element={<Investors />} />
         </Routes>
         <Footer />
       </div>

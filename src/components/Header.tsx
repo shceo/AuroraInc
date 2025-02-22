@@ -5,6 +5,7 @@ import { useTranslation } from 'react-i18next';
 import LanguageSwitcher from './LanguageSwitcher';
 import logoIcon from '../assets/images/logo.png';
 import logoIcon1 from '../assets/images/logo1.png';
+import { Link } from 'react-router-dom';
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -30,18 +31,16 @@ export default function Header() {
 
   useEffect(() => {
     if (isOpen) {
-      // Запрещаем прокрутку
       document.body.style.overflow = 'hidden';
     } else {
-      // Возвращаем стандартное значение
       document.body.style.overflow = '';
     }
   
-    // На случай размонтирования компонента – сбрасываем стиль
     return () => {
       document.body.style.overflow = '';
     };
   }, [isOpen]);
+  
   return (
     <header
       className={`fixed top-0 left-0 right-0 bg-customDark/50 backdrop-blur-lg z-50 transition-transform duration-300 ${
@@ -61,18 +60,18 @@ export default function Header() {
           </div>
 
           <nav className="hidden md:flex space-x-8">
-            <a
-              href="/advertisers"
+            <Link
+              to="/advertisers"
               className="text-gray-100 hover:text-blue-600 transition-colors"
             >
               {t('navigation.advertisers')}
-            </a>
-            <a
-              href="#investors"
+            </Link>
+            <Link
+              to="/investors"
               className="text-gray-100 hover:text-blue-600 transition-colors"
             >
               {t('navigation.investors')}
-            </a>
+            </Link>
             <a
               href="#about"
               className="text-gray-100 hover:text-blue-600 transition-colors"
@@ -82,7 +81,7 @@ export default function Header() {
           </nav>
 
           <div className="hidden md:flex items-center space-x-4">
-          <LanguageSwitcher />
+            <LanguageSwitcher />
             <a
               href="https://t.me/Aurora_llc"
               target="_blank"
@@ -127,10 +126,10 @@ export default function Header() {
         </div>
       </div>
       <div
-  className={`fixed inset-0 h-screen bg-black text-white shadow-lg transform transition-transform duration-300 ${
-    isOpen ? 'translate-x-0' : 'translate-x-full'
-  }`}
->
+        className={`fixed inset-0 h-screen bg-black text-white shadow-lg transform transition-transform duration-300 ${
+          isOpen ? 'translate-x-0' : 'translate-x-full'
+        }`}
+      >
         <div className="flex justify-between items-center p-4 border-b">
           <button onClick={() => setIsOpen(false)}>
             <svg
@@ -149,22 +148,20 @@ export default function Header() {
           </button>
         </div>
         <nav className="flex flex-col space-y-4 p-4">
-          <a
-            href="#advertisers"
+          <Link
+            to="/advertisers"
             className="text-gray-100 mt-4 hover:text-blue-600 transition-colors"
             onClick={() => setIsOpen(false)}
           >
-                         {t('navigation.advertisers')}
-
-          </a>
-          <a
-            href="#investors"
+            {t('navigation.advertisers')}
+          </Link>
+          <Link
+            to="/investors"
             className="text-gray-100 hover:text-blue-600 transition-colors"
             onClick={() => setIsOpen(false)}
           >
-              {t('navigation.investors')}
-
-          </a>
+            {t('navigation.investors')}
+          </Link>
           <a
             href="#about"
             className="text-gray-100 hover:text-blue-600 transition-colors"
@@ -198,7 +195,6 @@ export default function Header() {
           </div>
         </nav>
         <LanguageSwitcher />
-
       </div>
     </header>
   );
