@@ -69,26 +69,87 @@ export default {
       ]
     },
     faq: {
-      title: 'Ko‘p so‘raladigan savollar',
+      title: "Tez-tez beriladigan savollar",
       list: [
         {
-          question: 'Aurora boshqa kompaniyalardan nimasi bilan farq qiladi?',
-          answer: 'Bizning noyob yondashuvimiz zamonaviy texnologiyalarni foydalanuvchi ehtiyojlariga mos dizayn bilan birlashtiradi va foydalanuvchilarimiz uchun haqiqiy qiymat yaratadi.'
+          question: "Aurora boshqa kompaniyalardan nimasi bilan farq qiladi?",
+          answer: "Bizning yondashuvimiz ilg‘or texnologiyalar va foydalanuvchi uchun qulay dizaynni birlashtirib, haqiqiy qadriyat yaratuvchi yechimlarni taklif qiladi."
         },
         {
-          question: 'Ma’lumotlarning maxfiyligi va xavfsizligini qanday ta’minlaysiz?',
-          answer: 'Biz foydalanuvchi ma’lumotlarini himoya qilish uchun ilg‘or shifrlash va xavfsizlik choralarini qo‘llaymiz, soha bo‘yicha eng yaxshi amaliyotlar va standartlarga rioya qilamiz.'
+          question: "Aurora ma'lumotlarning xavfsizligini qanday ta’minlaydi?",
+          answer: "Biz ilg‘or shifrlash texnologiyalarini qo‘llab, GDPR va ISO kabi xalqaro xavfsizlik standartlariga amal qilamiz."
         },
         {
-          question: 'Aurora xizmatlarini mavjud tizimlarim bilan integratsiya qila olamanmi?',
-          answer: 'Ha, bizning xizmatlarimiz integratsiya uchun mos ravishda ishlab chiqilgan va to‘liq API hamda hujjatlar bilan ta’minlangan.'
+          question: "Aurora xizmatlarini boshqa tizimlarga integratsiya qilish mumkinmi?",
+          answer: "Ha, bizning xizmatlarimiz API va hujjatlar bilan qulay integratsiya qilinishi mumkin."
         },
         {
-          question: 'Qanday qo‘llab-quvvatlash xizmatlari mavjud?',
-          answer: '24/7 texnik yordam, mijozlar bilan ishlash bo‘yicha menejerlar va to‘liq hujjatlar bizning korporativ mijozlarimiz uchun mavjud.'
+          question: "Aurora qanday qo‘llab-quvvatlash xizmatlarini taklif qiladi?",
+          answer: "Biz 24/7 texnik yordam, shaxsiy menejerlar va batafsil hujjatlarni taqdim etamiz."
+        },
+        {
+          question: "Aurora'ning uzoq muddatli strategiyasi qanday?",
+          answer: "Biz texnologiya va innovatsiyalar sohasida jahon yetakchisiga aylanishni, AI, bulut xizmatlari va avtomatlashtirishga e'tibor qaratishni maqsad qilganmiz."
+        },
+        {
+          question: "Aurora qaysi sohalarga xizmat ko‘rsatadi?",
+          answer: "Biz moliya, tibbiyot, chakana savdo va logistika sohalariga texnologik yechimlar taklif qilamiz."
+        },
+        {
+          question: "Aurora foyda keltiradigan kompaniyami?",
+          answer: "Biz barqaror daromad o‘sishini namoyish etmoqdamiz va innovatsiyalar hamda investitsiyalar orqali uzoq muddatli foydalilikka intilamiz."
+        },
+        {
+          question: "Aurora daromadining asosiy manbalari qanday?",
+          answer: "Bizning daromadimiz SaaS obunalari, korporativ yechimlar, bulutli xizmatlar va tahliliy platformalardan shakllanadi."
+        },
+        {
+          question: "Aurora IPO rejalashtiryaptimi?",
+          answer: "Biz bozor sharoitlarini sinchkovlik bilan kuzatmoqdamiz va kelajakda birja savdolariga chiqish imkoniyatini ko‘rib chiqamiz."
+        },
+        {
+          question: "Aurora'ning asosiy raqobatchilari kim?",
+          answer: "Biz turli texnologik kompaniyalar bilan raqobat qilamiz, biroq innovatsiya va xavfsizlik bo‘yicha ustunlikka egamiz."
+        },
+        {
+          question: "Aurora qanday iste’dodlarni jalb qiladi va ushlab turadi?",
+          answer: "Biz raqobatbardosh ish haqi, moslashuvchan ish sharoitlari va professional o‘sish imkoniyatlarini taklif qilamiz."
+        },
+        {
+          question: "Aurora qanday hamkorliklar o‘rnatgan?",
+          answer: "Biz AI, bulut texnologiyalari va kiberxavfsizlik sohasidagi yetakchi kompaniyalar bilan hamkorlik qilamiz."
+        },
+        {
+          question: "Aurora'ning texnologiyalari qay darajada kengaytirilishi mumkin?",
+          answer: "Bizning bulutli arxitektura har qanday hajmdagi mijozlarga mos keladigan yechimlarni ta’minlashga imkon beradi."
+        },
+        {
+          question: "Aurora uchun qaysi bozorlar ustuvor hisoblanadi?",
+          answer: "Biz Shimoliy Amerika, Yevropa va Osiyoda faol rivojlanib, mahsulotlarimizni mahalliy ehtiyojlarga moslashtirmoqdamiz."
+        },
+        {
+          question: "Aurora qonuniy me’yorlarga qanday rioya qiladi?",
+          answer: "Biz GDPR, HIPAA va ISO kabi xalqaro standartlarga rioya qilamiz."
+        },
+        {
+          question: "Aurora uchun asosiy xavf-xatarlar qanday?",
+          answer: "Kiberxavfsizlik tahdidlari, qonunlardagi o‘zgarishlar va makroiqtisodiy beqarorlik asosiy xavf omillari hisoblanadi."
+        },
+        {
+          question: "Aurora mijozlar qoniqishini qanday o‘lchaydi?",
+          answer: "Biz NPS, foydalanuvchi fikrlari va jalb etish ko‘rsatkichlarini kuzatib boramiz."
+        },
+        {
+          question: "Aurora ekologik tashabbuslarni qo‘llab-quvvatlaydimi?",
+          answer: "Ha, biz yashil texnologiyalarga sarmoya kiritamiz va data-markazlarimizning uglerod izini kamaytiramiz."
+        },
+        {
+          question: "Aurora mahsulotlarida AI qanday ishlatiladi?",
+          answer: "AI avtomatlashtirish, shaxsiylashtirish va ma’lumotlarni tahlil qilish uchun ishlatiladi."
         }
       ]
-    },   
+    },
+      
     footer: {
       contactUs: "Biz bilan bog'laning",
       address: "Innovatsiya ko'chasi 123, Texno Shahar",

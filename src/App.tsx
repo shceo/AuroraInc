@@ -15,11 +15,7 @@ import PropTech from './pages/PropTech';
 import Missions from './pages/Missions';
 import Future from './pages/Future';
 import Principles from './pages/Princisples';
-
-
-
-
-
+import FAQ from './pages/FAQ';
 import './assets/style/font.css'
 import Investors from './pages/investors';
 import Careers from './pages/careers';
@@ -55,6 +51,7 @@ function App() {
           <Route path="/princisples" element={<Principles />} />
           <Route path="/investors" element={<Investors />} />
           <Route path="/careers" element={<Careers />} />
+          <Route path="/faq" element={<FAQ />} />
         </Routes>
         <Footer />
       </div>

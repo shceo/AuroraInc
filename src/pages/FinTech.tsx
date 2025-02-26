@@ -1,5 +1,5 @@
 import { CreditCard, ArrowLeft } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom'; 
 import AIProjects from '../components/AIProject';
 
 
