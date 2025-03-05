@@ -1,9 +1,9 @@
-import React from 'react';
 import { useTranslation } from 'react-i18next';
 
 const languages = [
-  { code: 'uz', name: 'O\'zbek' },
+
   { code: 'ru', name: 'Русский' },
+  { code: 'uz', name: 'O\'zbek' },
   { code: 'en', name: 'English' },
 ];
 
