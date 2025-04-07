@@ -1,161 +1,70 @@
-import { useEffect } from 'react';
-import { useTranslation } from 'react-i18next';
-import '../assets/style/hero.css';
+import React, { useEffect, useRef } from 'react';
 
 export default function Hero() {
-  const { t } = useTranslation();
+  const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
-    const script = document.createElement('script');
-    script.src =
-      'https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js';
-    script.async = true;
-    script.onload = () => {
-      if ((window as any).particlesJS) {
-        (window as any).particlesJS('particles-js', {
-          particles: {
-            number: {
-              value: 100,
-              density: {
-                enable: true,
-                value_area: 800,
-              },
-            },
-            color: {
-              value: '#FFFFFF',
-            },
-            shape: {
-              type: 'circle',
-              stroke: {
-                width: 0,
-                color: '#000000',
-              },
-              polygon: {
-                nb_sides: 5,
-              },
-              image: {
-                width: 100,
-                height: 100,
-              },
-            },
-            opacity: {
-              value: 0.5,
-              random: false,
-              anim: {
-                enable: false,
-                speed: 1,
-                opacity_min: 0.1,
-                sync: false,
-              },
-            },
-            size: {
-              value: 4,
-              random: true,
-              anim: {
-                enable: false,
-                speed: 40,
-                size_min: 0.1,
-                sync: false,
-              },
-            },
-            line_linked: {
-              enable: true,
-              distance: 150,
-              color: '#FFFFFF',
-              opacity: 0.4,
-              width: 1,
-            },
-            move: {
-              enable: true,
-              speed: 7,
-              direction: 'none',
-              random: false,
-              straight: false,
-              out_mode: 'out',
-              attract: {
-                enable: false,
-                rotateX: 600,
-                rotateY: 1200,
-              },
-            },
-          },
-          interactivity: {
-            detect_on: 'canvas',
-            events: {
-              onhover: {
-                enable: true,
-                mode: 'grab', // Изменили с 'attract' на 'grab'
-              },
-              onclick: {
-                enable: true,
-                mode: 'push',
-              },
-              resize: true,
-            },
-            modes: {
-              grab: {
-                distance: 200,
-                line_linked: {
-                  opacity: 1,
-                },
-              },
-              // При необходимости можно оставить или удалить ненужные режимы
-              attract: {
-                distance: 400,
-                duration: 0.2,
-              },
-              bubble: {
-                distance: 400,
-                size: 50,
-                duration: 2,
-                opacity: 8,
-                speed: 1,
-              },
-              repulse: {
-                distance: 200,
-              },
-              push: {
-                particles_nb: 4,
-              },
-              remove: {
-                particles_nb: 2,
-              },
-            },
-          },
-          retina_detect: true,
-        });
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+
+    const ctx = canvas.getContext('2d');
+    if (!ctx) return;
+
+    let animationFrameId: number;
+    let time = 0;
+
+    const render = () => {
+      time += 0.01;
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      const gradient = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
+      gradient.addColorStop(0, 'rgba(37, 99, 235, 0.5)');
+      gradient.addColorStop(1, 'rgba(59, 130, 246, 0.5)');
+
+      ctx.fillStyle = gradient;
+      ctx.beginPath();
+
+      for (let i = 0; i < Math.PI * 2; i += 0.1) {
+        const x = canvas.width / 2 + Math.cos(i) * (100 + Math.sin(time + i) * 20);
+        const y = canvas.height / 2 + Math.sin(i) * (100 + Math.sin(time + i) * 20);
+
+        if (i === 0) {
+          ctx.moveTo(x, y);
+        } else {
+          ctx.lineTo(x, y);
+        }
       }
+
+      ctx.closePath();
+      ctx.fill();
+
+      animationFrameId = requestAnimationFrame(render);
     };
-    document.body.appendChild(script);
+
+    render();
 
     return () => {
-      document.body.removeChild(script);
-    };
-  }, []);
-
-  // Запрет копирования и выделения текста
-  useEffect(() => {
-    const disableSelect = (e: Event) => e.preventDefault();
-
-    document.addEventListener('contextmenu', disableSelect);
-    document.addEventListener('selectstart', disableSelect);
-
-    return () => {
-      document.removeEventListener('contextmenu', disableSelect);
-      document.removeEventListener('selectstart', disableSelect);
+      cancelAnimationFrame(animationFrameId);
     };
   }, []);
 
   return (
-    <section className="bg-customDark relative min-h-screen flex items-center justify-center overflow-hidden select-none">
-      {/* Контейнер для частиц */}
-      <div id="particles-js" className="absolute top-0 left-0 w-full h-full z-0"></div>
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gray-50">
+      {/* <canvas
+        ref={canvasRef}
+        className="absolute inset-0 w-full h-full"
+        width={800}
+        height={600}
+      /> */}
       <div className="relative z-10 text-center px-4">
-        <h1 className="text-5xl md:text-7xl font-bold mb-8 text-gray-100">
-          {t('hero.titleLine1')}
+        <h1 className="text-5xl md:text-7xl font-bold mb-8 text-blue-600">
+          From Great Ideas
           <br />
-          {t('hero.titleLine2')}
+          to a Great Future
         </h1>
+        <button className="bg-blue-600 text-white px-8 py-3 rounded-full font-semibold shadow-lg hover:bg-blue-700 hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300">
+          Get Started
+        </button>
       </div>
     </section>
   );

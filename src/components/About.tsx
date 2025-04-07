@@ -1,79 +1,55 @@
-import { Link } from 'react-router-dom';
-import bg1 from '../assets/images/bg1.png';
-import bg2 from '../assets/images/bg2.png';
-import bg3 from '../assets/images/bg3.png';
-import { useTranslation } from 'react-i18next';
-
-interface LocalizedAboutItem {
-  title: string;
-  description: string;
-}
+import React, { useState } from 'react';
+import { Target, Rocket, Shield } from 'lucide-react';
 
 export default function About() {
-  const { t } = useTranslation();
-  const localizedAbout = t('about.list', { returnObjects: true }) as LocalizedAboutItem[];
-
   return (
-    <div id='about'   className="bg-white min-h-screen bg-customDark py-24">
+    <div className="min-h-screen bg-gray-50 py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-4xl font-bold text-center mb-12 text-gray-900">
-          {t('about.title')}
-        </h2>
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          {/* Mission */}
-          <Link
-            to="/missions"
-            className="lg:col-span-2 relative h-[632px] rounded-xl overflow-hidden shadow-sm cursor-pointer group"
+          <div
+            className="lg:col-span-2 bg-white rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow cursor-pointer"
+            onMouseEnter={(e) => e.currentTarget.style.transform = "scale(1.02)"}
+            onMouseLeave={(e) => e.currentTarget.style.transform = "scale(1)"}
+            style={{ transition: "transform 0.3s ease" }}
           >
-            <div
-              className="absolute inset-0 bg-cover bg-center transition-transform duration-300 transform group-hover:scale-105"
-              style={{ backgroundImage: `url(${bg3})` }}
-            />
-            <div className="relative p-8">
-              <h2 className="text-7xl font-bold text-gray-900 mb-4">
-                {localizedAbout[0]?.title}
-              </h2>
-              <p className="text-2xl text-gray-900">
-                {localizedAbout[0]?.description}
-              </p>
-            </div>
-          </Link>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Mission</h2>
+            <p className="text-xl text-gray-600">What is our purpose?</p>
+            <p className="mt-4 text-gray-600">
+              At Aurora Inc., we're dedicated to pushing the boundaries of technology
+              to create solutions that enhance and simplify people's lives. Our mission
+              is to bridge the gap between imagination and reality through innovative
+              technology.
+            </p>
+          </div>
 
           <div className="lg:col-span-1 space-y-8">
-            {/* Future */}
-            <Link to="/future">
-              <div className="relative rounded-xl h-[300px] overflow-hidden shadow-sm cursor-pointer group">
-                <div
-                  className="absolute inset-0 bg-cover bg-center transition-transform duration-300 transform group-hover:scale-105"
-                  style={{ backgroundImage: `url(${bg2})` }}
-                />
-                <div className="relative p-8">
-                  <h2 className="text-4xl font-bold text-gray-900 mb-4">
-                    {localizedAbout[1]?.title}
-                  </h2>
-                  <p className="text-gray-900">
-                    {localizedAbout[1]?.description}
-                  </p>
-                </div>
-              </div>
-            </Link>
+            <div
+              className="bg-white rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow cursor-pointer"
+              onMouseEnter={(e) => e.currentTarget.style.transform = "scale(1.02)"}
+              onMouseLeave={(e) => e.currentTarget.style.transform = "scale(1)"}
+              style={{ transition: "transform 0.3s ease" }}
+            >
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">Future</h2>
+              <p className="text-gray-600">How we envision the company's future.</p>
+              <p className="mt-4 text-gray-600">
+                We see Aurora Inc. leading the technological revolution, setting new
+                standards in AI, sustainable technology, and digital innovation.
+              </p>
+            </div>
 
-            {/* Principles */}
-            <div className="relative rounded-xl h-[300px] overflow-hidden shadow-sm cursor-pointer group">
-              <Link to="/princisples">
-                <div
-                  className="absolute inset-0 bg-cover bg-center transition-transform duration-300 transform group-hover:scale-105"
-                  style={{ backgroundImage: `url(${bg1})` }}
-                />
-                <div className="relative p-8">
-                  <h2 className="text-4xl font-bold text-gray-900 mb-4">
-                    {localizedAbout[2]?.title}
-                  </h2>
-                  <p className="text-gray-900">
-                    {localizedAbout[2]?.description}
-                  </p>
-                </div>
-              </Link>
+            <div
+              className="bg-white rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow cursor-pointer"
+              onMouseEnter={(e) => e.currentTarget.style.transform = "scale(1.02)"}
+              onMouseLeave={(e) => e.currentTarget.style.transform = "scale(1)"}
+              style={{ transition: "transform 0.3s ease" }}
+            >
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">Principles</h2>
+              <p className="text-gray-600">The rules we work by.</p>
+              <p className="mt-4 text-gray-600">
+                Innovation, integrity, and impact guide everything we do. We believe
+                in creating technology that serves humanity while respecting privacy
+                and sustainability.
+              </p>
             </div>
           </div>
         </div>
@@ -81,3 +57,26 @@ export default function About() {
     </div>
   );
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

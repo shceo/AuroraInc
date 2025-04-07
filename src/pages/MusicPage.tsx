@@ -1,8 +1,8 @@
 import React from 'react';
-import { Brain, ArrowLeft } from 'lucide-react';
+import { Music, ArrowLeft } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
-export default function AIPage() {
+export default function MusicPage() {
   const navigate = useNavigate();
 
   return (
@@ -18,22 +18,22 @@ export default function AIPage() {
 
         <div className="bg-white rounded-xl shadow-lg p-8">
           <div className="flex items-center mb-6">
-            <Brain className="w-12 h-12 text-blue-600 mr-4" />
-            <h1 className="text-4xl font-bold text-blue-600">Aurora AI</h1>
+            <Music className="w-12 h-12 text-blue-600 mr-4" />
+            <h1 className="text-4xl font-bold text-blue-600">Aurora Music</h1>
           </div>
 
           <div className="prose max-w-none">
             <p className="text-xl text-gray-600 mb-8">
-              Cutting-edge artificial intelligence solutions for businesses and enterprises.
+              Next-generation music streaming platform with personalized recommendations and high-quality audio.
             </p>
 
             <h2 className="text-2xl font-semibold text-blue-600 mb-4">Features</h2>
             <ul className="space-y-2 text-gray-600">
-              <li>Machine learning models</li>
-              <li>Natural language processing</li>
-              <li>Computer vision solutions</li>
-              <li>Predictive analytics</li>
-              <li>Custom AI development</li>
+              <li>AI-powered music recommendations</li>
+              <li>High-fidelity audio streaming</li>
+              <li>Collaborative playlists</li>
+              <li>Offline listening</li>
+              <li>Cross-platform synchronization</li>
             </ul>
           </div>
         </div>
